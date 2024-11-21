@@ -5,7 +5,15 @@ const withNextra = nextra({
   themeConfig: './theme.config.jsx'
 })
  
-export default withNextra()
+export default withNextra({
+  output: 'export',
+  reactStrictMode: true,
+  
+  webpack: (config) => {
+    config.optimization.minimize = true;
+    return config;
+  }
+})
  
 // If you have other Next.js configurations, you can pass them as the parameter:
 // export default withNextra({ /* other next.js config */ })
