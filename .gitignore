@@ -28,5 +28,6 @@ dist-ssr
 
 # Custom
 /styles/tailwind.css
+out
 .vercel
 package-lock.json
